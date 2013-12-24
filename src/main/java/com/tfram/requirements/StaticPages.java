@@ -7,7 +7,6 @@ public class StaticPages {
 	@Feature
 	public class Footer {
 		public class ProductSection {};
-		public class AboutSection {};
 	}
 
 }

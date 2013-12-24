@@ -19,6 +19,11 @@ public class GlobalSteps extends ScenarioSteps {
 	}
 	
 	@Step
+	public void checkPageTitle(String expectedTitle) {
+		basePage().checkPageTitle(expectedTitle);
+	}
+	
+	@Step
 	public void clickOnLogo() {
 		basePage().clickEvernoteLogo();
 	}

@@ -31,10 +31,7 @@ public class TestFooterProductSection {
     public void testSiteLogo() {
     	globalSteps.clickFooterLink("Evernote");
     	globalSteps.checkLabelHeader("Evernote");
-    	globalSteps.clickOnLogo();
-    	globalSteps.clickFooterLink("Skitch");
-    	globalSteps.checkLabelHeader("Skitch");
-    	globalSteps.clickOnLogo();
+    	globalSteps.checkPageTitle("Evernote");
     }
 
 }
