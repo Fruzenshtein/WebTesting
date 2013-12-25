@@ -8,12 +8,12 @@
 		<dependency>
 			<groupId>net.thucydides</groupId>
 			<artifactId>thucydides-core</artifactId>
-			<version>0.9.210</version>
+			<version>0.9.228</version>
 		</dependency>
 		<dependency>
 			<groupId>net.thucydides</groupId>
 			<artifactId>thucydides-junit</artifactId>
-			<version>0.9.210</version>
+			<version>0.9.228</version>
 		</dependency>
 	</dependencies>
 	<build>
