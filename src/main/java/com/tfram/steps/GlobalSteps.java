@@ -9,31 +9,33 @@ import com.tfram.pages.BasePage;
 public class GlobalSteps extends ScenarioSteps {
 
 	private static final long serialVersionUID = 1L;
-
+	
 	public GlobalSteps(Pages pages) {
-		super(pages);
+	     super(pages);
 	}
 	
-	private BasePage basePage;
+	private BasePage basePage() {
+		return getPages().currentPageAt(BasePage.class);
+	}
 	
 	@Step
 	public void checkPageTitle(String expectedTitle) {
-		basePage.checkPageTitle(expectedTitle);
+		basePage().checkPageTitle(expectedTitle);
 	}
 	
 	@Step
 	public void clickOnLogo() {
-		basePage.clickEvernoteLogo();
+		basePage().clickEvernoteLogo();
 	}
 	
 	@Step
 	public void clickFooterLink(String linkText) {
-		basePage.clickFooterLink(linkText);
+		basePage().clickFooterLink(linkText);
 	}
 	
 	@Step
 	public void checkLabelHeader(String expectedHeader) {
-		basePage.checkLabelHeader(expectedHeader);
+		basePage().checkLabelHeader(expectedHeader);
 	}
 
 }

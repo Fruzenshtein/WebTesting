@@ -6,6 +6,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -17,6 +18,10 @@ public class BasePage extends PageObject {
 	
 	@FindBy(xpath="//div[@id='content']//h1")
 	private WebElement staticPageLabelHeader;
+	
+	public BasePage(WebDriver driver) {
+		super(driver);
+	}
 	
 	public void checkPageTitle(String expectedTitle) {
 		assertTrue(getTitle().contains(expectedTitle));
