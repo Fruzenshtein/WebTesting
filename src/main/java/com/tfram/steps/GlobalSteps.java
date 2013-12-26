@@ -1,7 +1,6 @@
 package com.tfram.steps;
 
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
 
 import com.tfram.pages.BasePage;
@@ -9,10 +8,6 @@ import com.tfram.pages.BasePage;
 public class GlobalSteps extends ScenarioSteps {
 
 	private static final long serialVersionUID = 1L;
-	
-	public GlobalSteps(Pages pages) {
-	     super(pages);
-	}
 	
 	private BasePage basePage() {
 		return getPages().currentPageAt(BasePage.class);

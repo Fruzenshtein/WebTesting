@@ -16,7 +16,9 @@ import com.tfram.steps.GlobalSteps;
 
 @RunWith(ThucydidesRunner.class)
 @Story(ProductSection.class)
-public class TestFooterProductSection {
+public class JustOneProductTest {
+	
+	private String productName = "Evernote";
 	
 	@Managed
 	public WebDriver webDriver;
@@ -28,10 +30,10 @@ public class TestFooterProductSection {
     public GlobalSteps globalSteps;
     
     @Test
-    public void testSiteLogo() {
-    	globalSteps.clickFooterLink("Evernote");
-    	globalSteps.checkLabelHeader("Evernote");
-    	globalSteps.checkPageTitle("Evernote");
+    public void checkEvernoteStaticPage() {
+    	globalSteps.clickFooterLink(productName);
+    	globalSteps.checkLabelHeader(productName);
+    	globalSteps.checkPageTitle(productName);
     }
 
 }
